@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*----------------------------------------------------------*/
+
+body {
+    font-family: sans-serif;
+    background-color: #050505; /*fundo do site*/
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "aside  main"
+        "footer footer";
+}
+
+/*----------------------------------------------------------*/
+
+.header {
+    
+    grid-area: header;
+    background-color: #212025;
+    /*cor fundo cabe.*/
+    color: rgba(226, 217, 217, 0.926);
+    /*cor titulo*/
+    padding: 15px;
+}
+
+/*----------------------------------------------------------*/
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*----------------------------------------------------------*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+/*----------------------------------------------------------*/
+
+.menu {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centraliza se quebrar */
+}
+
+.menu a {
+    color: #dee2e6;
+    /*cor dos links do cabeçalho*/
+    font-weight: bold;
+    white-space: nowrap;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.menu a:hover {
+    background-color: rgba(195, 28, 184, 0.226);
+    /*cor de passar o mouse*/
+}
+
+/*----------------------------------------------------------*/
+
+.content h1 {
+    margin-top: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+   color: #ffffff; /*cor da fonte*/
+   
+
+}
+
+.content p {
+    margin-top: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+   color: #ffffff; /*cor da fonte*/
+
+}
+
+
+
+/*----------------------------------------------------------*/
+
+
+.grid-cards {
+    display: grid;
+    gap: 15px;
+    margin-top: 220px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    
+}
+
+.card {
+    background-color: #212025;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 2rem;
+    /*tamanho dos números*/
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    min-height: 20px;
+    
+    /*tamanho de cada quadrado*/
+}
+
+/*----------------------------------------------------------*/
+.footer {
+    display:block;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.footer {
+    grid-area: footer;
+    background-color: #212025;
+    color: #fff;
+    padding: 5px;
+}
+
